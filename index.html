@@ -4,62 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Keeping it clean, simple, and blue */
-        .navbar-custom { background-color: #0d6efd; }
-        .section-title { color: #0d6efd; font-weight: bold; margin-bottom: 15px; }
 
-        /* Removed hover animation to keep it simple */
-        /* .card:hover { transform: scale(1.02); transition: 0.2s ease-in-out; } */
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .navbar-custom { background-color: #0d6efd; }
+        .section-title { color: #0d6efd; font-weight: bold; }
     </style>
 </head>
+
 <body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom mb-5">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom mb-4">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">My Portfolio</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <div class="container">
-        
-        <div class="row mb-4 mt-2 align-items-center">
-            <div class="col-md-2 text-center text-md-start mb-3 mb-md-0">
-                <img src="profile.jpg" alt="Profile Picture" class="img-fluid rounded-circle border shadow-sm" style="max-width: 150px;">
+
+        <!-- Header -->
+        <div class="row mb-4 align-items-center">
+            <div class="col-md-2 text-center mb-3 mb-md-0">
+                <img src="images/profile.jpg" alt="Profile Picture" 
+                     class="img-fluid rounded-circle border" 
+                     style="max-width: 150px;">
             </div>
+
             <div class="col-md-10 border-bottom pb-3">
-                <h1 class="fw-bold display-4 text-dark">Arshvinder Singh</h1>
+                <h1 class="fw-bold display-5">Arshvinder Singh</h1>
                 <p class="lead text-muted">Computer Science Student | Backend & Data Enthusiast</p>
             </div>
         </div>
 
-        <div class="row mb-5 mt-4">
-            <div class="col-md-12">
-                <h3 class="section-title">About Me</h3>
-                <p>Hey, I'm a Computer Science student who likes solving problems and building things that make sense. I usually lean toward backend and data work because I enjoy figuring out how things run behind the scenes and making systems work smoothly.</p>
-                <p>Lately, I've been getting really curious about quantum computing - especially the idea of qubits and how completely different it is from normal computers. I'm still new to it, but I like exploring big concepts even if I don't fully understand them yet.</p>
-                <p>Outside of that, I'm just someone who likes learning, improving, and keeping my work simple and clear.</p>
+        <!-- About Me -->
+        <div id="about" class="mb-5">
+            <h3 class="section-title">About Me</h3>
+            <p>Hey, I'm a Computer Science student who likes solving problems and building things that make sense. I usually lean toward backend and data work because I enjoy figuring out how things run behind the scenes and making systems work smoothly.</p>
+            <p>Recently, I’ve been getting curious about quantum computing — especially qubits and how different they are from normal computers. I’m still learning, but I enjoy exploring big ideas even if I don’t fully understand them yet.</p>
+            <p>Outside of that, I like learning, improving, and keeping my work simple and clear.</p>
 
-                <h3 class="section-title mt-5">How I Work</h3>
-                <p>I like approaching problems in a structured and practical way. I focus on understanding the core issue first, then building solutions that are clean, reliable, and easy to maintain. I enjoy backend and data-related work because it lets me think logically, work with systems, and make things run efficiently.</p>
-                <p>I try to keep my workflow simple: break tasks down, stay organized, and write code that's clear rather than complicated. I’m always open to learning new tools or concepts, especially when they help me improve the quality of my work.</p>
-                <p>Get in touch at asing026@otttawa.ca</p>
-            </div>
+            <h3 class="section-title mt-4">How I Work</h3>
+            <p>I like approaching problems in a structured and practical way. I focus on understanding the core issue first, then building solutions that are clean and easy to maintain. I enjoy backend and data-related work because it lets me think logically and work with systems.</p>
+            <p>I try to keep my workflow simple: break tasks down, stay organized, and write clear code. I’m always open to learning new tools or concepts that help me improve.</p>
         </div>
 
-        <section id="projects" class="mt-5 mb-5 pb-5">
+        <!-- Projects -->
+        <section id="projects" class="mb-5 pb-4">
             <h3 class="section-title border-bottom pb-2">My Projects</h3>
-            
+
             <div class="row g-4 mt-2">
-                
+
                 <div class="col-md-3">
                     <a href="service.html" class="text-decoration-none text-dark">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <img src="project1.jpg" class="card-img-top" alt="Service Site" style="object-fit: cover; height: 180px;">
-                            <div class="card-body bg-white">
-                                <h5 class="card-title fw-bold">Service Site</h5>
-                                <p class="card-text text-muted small">Upcoming design project.</p>
+                        <div class="card h-100 border">
+                            <img src="images/project1.jpg" class="card-img-top" alt="Service Site" 
+                                 style="object-fit: cover; height: 180px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold">Service Site</h5>
+                                <p class="text-muted small">A basic service site showing pricing, contact info, and booking.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="memory-game.html" class="text-decoration-none text-dark">
+                        <div class="card h-100 border">
+                            <img src="images/BrainGame.jpg" class="card-img-top" alt="BrainMatch" 
+                                 style="object-fit: cover; height: 180px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold">BrainMatch – Memory Game</h5>
+                                <p class="text-muted small">A card‑matching memory game built with HTML, CSS, and JS.</p>
                             </div>
                         </div>
                     </a>
@@ -67,11 +96,12 @@
 
                 <div class="col-md-3">
                     <a href="coming-soon.html" class="text-decoration-none text-dark">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <img src="project2.jpg" class="card-img-top" alt="Memory Game" style="object-fit: cover; height: 180px;">
-                            <div class="card-body bg-white">
-                                <h5 class="card-title fw-bold">Memory Game</h5>
-                                <p class="card-text text-muted small">Upcoming interactive project.</p>
+                        <div class="card h-100 border">
+                            <img src="images/project3.jpg" class="card-img-top" alt="E-Commerce" 
+                                 style="object-fit: cover; height: 180px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold">E‑Commerce</h5>
+                                <p class="text-muted small">A simple storefront design for practicing UI structure.</p>
                             </div>
                         </div>
                     </a>
@@ -79,23 +109,12 @@
 
                 <div class="col-md-3">
                     <a href="coming-soon.html" class="text-decoration-none text-dark">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <img src="project3.jpg" class="card-img-top" alt="E-Commerce" style="object-fit: cover; height: 180px;">
-                            <div class="card-body bg-white">
-                                <h5 class="card-title fw-bold">E-Commerce</h5>
-                                <p class="card-text text-muted small">Upcoming storefront design.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-md-3">
-                    <a href="coming-soon.html" class="text-decoration-none text-dark">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <img src="project4.jpg" class="card-img-top" alt="Analytics" style="object-fit: cover; height: 180px;">
-                            <div class="card-body bg-white">
-                                <h5 class="card-title fw-bold">Analytics Dashboard</h5>
-                                <p class="card-text text-muted small">Upcoming data visualization.</p>
+                        <div class="card h-100 border">
+                            <img src="images/project4.jpg" class="card-img-top" alt="Analytics Dashboard" 
+                                 style="object-fit: cover; height: 180px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold">Analytics Dashboard</h5>
+                                <p class="text-muted small">A clean analytics layout for practicing UI and charts.</p>
                             </div>
                         </div>
                     </a>
@@ -104,8 +123,15 @@
             </div>
         </section>
 
+        <!-- Contact -->
+        <div id="contact" class="mb-5">
+            <h3 class="section-title">Contact Me</h3>
+            <p>You can reach me at:</p>
+            <p><strong>asing026@ottawa.ca</strong></p>
+        </div>
+
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

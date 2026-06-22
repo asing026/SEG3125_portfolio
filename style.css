@@ -1,0 +1,94 @@
+/* Simple BrainMatch Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: #0d6efd;
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+}
+
+/* Game board grid */
+.game-board {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+/* Grid sizes */
+.game-board.beginner {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.game-board.intermediate {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.game-board.advanced {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+/* Card size */
+.game-card {
+    width: 90px;
+    height: 90px;
+    background: #0d6efd;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.4s;
+}
+
+/* Card faces */
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front {
+    background: #0d6efd;
+    font-size: 1.5rem;
+}
+
+.card-back {
+    background: white;
+    transform: rotateY(180deg);
+}
+
+.card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.game-card.matched {
+    opacity: 0.6;
+}
+
+/* Footer */
+footer {
+    background: #0d6efd;
+    color: white;
+}
